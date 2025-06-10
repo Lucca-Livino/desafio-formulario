@@ -1,0 +1,47 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  width: 848px;
+  height: 150px;
+  background-color: #F1F1F199;
+  border-radius: 0px 8px 8px 0px;
+}
+
+.titulo, .texto{
+  margin: 25px;
+  padding-top: 25px;
+}
+
+.bloco{
+  width: 840px;
+  height: 112px;
+  background-color: #F1F1F199;
+  margin-top: 16px;
+  border-radius: 0px 8px 8px 0px;
+  border-left: 8px solid #286BB9;
+}
+
+.label{
+  margin-left: 24px;
+  display: block;
+  padding-top: 24px;
+}
+
+.campo{
+    margin-left: 24px;
+    width: 777px;
+    padding: 8px;
+    border: 1px solid #286BB9;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.radio{
+    margin-left: 24px;
+    
+}
+
+
