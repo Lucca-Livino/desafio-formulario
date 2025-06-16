@@ -5,54 +5,62 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Quicksand:wght@300..700&display=swap"
+    rel="stylesheet">
   <title>Desafio Formulário</title>
 </head>
 
 <body>
-  <header>
-    <h1 class="titulo">Inscrição nos cursos FIC</h1>
-    <p class="texto">Prazo para responder: 05/05/2025</p>
-  </header>
-
   <form id="formulario">
+    <header>
+      <h1 class="titulo">Inscrição nos cursos FIC</h1>
+      <p class="texto">Prazo para responder: 05/05/2025</p>
+    </header>
+
     <div class="bloco">
       <div class="info">
-        <label for="nome" class="label">Nome</label>
+        <label for="nome" class="label"> <span class="obrigatorio">*</span>Nome</label>
         <input type="text" id="nome" class="campo">
 
       </div>
     </div>
     <div class="bloco">
-      <label for="email" class="label">E-mail</label>
+      <label for="email" class="label"> <span class="obrigatorio">*</span>E-mail</label>
       <input type="text" id="email" class="campo">
     </div>
-    <div class="bloco">
-      <label class="label">Sexo:</label>
+    <div class="bloco-radio">
+      <label class="label"> <span class="obrigatorio">*</span>Sexo:</label>
       <input class="radio" type="radio" name="sexo" id="sexo_masculino" />
-      <label for="sexo_masculino">masculino</label>
+      <label for="sexo_masculino">Masculino</label>
       <input class="radio" type="radio" name="sexo" id="sexo_feminino" />
-      <label for="sexo_feminino">feminino</label>
+      <label for="sexo_feminino">Feminino</label>
     </div>
     <div class="bloco">
-      <label class="label" for="cursos" >Curso:</label>
+      <label class="label" for="cursos"> <span class="obrigatorio">*</span>Curso:</label>
       <select class="seletor" id="cursos">
         <option value="1">HTML e CSS</option>
         <option value="2">Git</option>
         <option value="3">API</option>
       </select>
     </div>
-    <div class="bloco">
+    <div class="bloco-obs">
       <label class="label" for="observacoes">Descreva o atendimento especial (opcional)</label>
       <textarea class="area" id="observacoes"></textarea>
     </div>
-    <div class="bloco">
-      <input class="label" type="checkbox" id="termos" />
-      <label for="termos">Estou de acordo com os termos de serviço</label>
+    <div class="bloco-check">
+      <input type="checkbox" id="termos" />
+      <label for="termos">
+        <span class="obrigatorio">*</span> Estou de acordo com os termos de serviço
+      </label>
+    </div>
+    
+    
+    <div>
+      <p>Os campos marcados com<span class="obrigatorio">*</span>são obrigatórios</p>
     </div>
     <div>
-      <p>Os campos marcados com * são obrigatórios</p>
-    </div>
-    <div class="bloco">
       <input class="botao" type="submit" value="Realizar Inscrição" />
     </div>
 
