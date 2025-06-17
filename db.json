@@ -1,0 +1,22 @@
+{
+  "usuarios": [
+    {
+      "id": "1d45",
+      "nome": "Lucca",
+      "email": "lucca@gmail.com",
+      "sexo": "masculino",
+      "curso": "HTML e CSS",
+      "descricao": "teste",
+      "termo": true
+    },
+    {
+      "id": "af82",
+      "nome": "Deivid",
+      "email": "Deivinho@gmail.com",
+      "sexo": "masculino",
+      "curso": "API",
+      "descricao": "Daora",
+      "termo": true
+    }
+  ]
+}
