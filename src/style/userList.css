@@ -1,0 +1,34 @@
+body {
+  background-color: #53606d83;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.usuario-item {
+  padding: 16px 24px;
+  border-bottom: 1px solid #d1d5db;
+  color: #222c36;
+  background: #fff;
+  border-radius: 8px;
+  width: 100%; /* ocupa toda a largura possível */
+  box-sizing: border-box;
+}
+
+.lista-container {
+  max-width: 800px;
+  margin: 40px auto;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+#lista-body {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px; 
+}
+
+.usuario-item strong {
+  color: #2563eb;
+}
