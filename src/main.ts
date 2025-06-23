@@ -1,4 +1,4 @@
-import './style.css'
+import './style/style.css'
 import { z } from 'zod'
 
 const nome = document.querySelector<HTMLInputElement>('#nome')!
@@ -9,6 +9,29 @@ const curso = document.querySelector<HTMLSelectElement>('#cursos')!
 const descricao = document.querySelector<HTMLTextAreaElement>('#observacoes')!
 const termos = document.querySelector<HTMLInputElement>('#termos')!
 const enviar = document.querySelector<HTMLInputElement>('input[type="submit"]')!
+
+const themeSwitch = document.getElementById('theme-switch')!
+let darkmode = localStorage.getItem('darkmode');
+
+const enableDarkMode = () => {
+    document.body.classList.add('dark-mode')
+    localStorage.setItem('darkmode', 'active');
+}
+
+const disableDarkMode = () => {
+    document.body.classList.remove('dark-mode')
+    localStorage.removeItem('darkmode');
+}
+
+if (darkmode === "active") {
+    enableDarkMode();
+}
+
+themeSwitch.addEventListener('click', () => {
+    darkmode = localStorage.getItem('darkmode');
+    darkmode !== "active" ? enableDarkMode() : disableDarkMode();
+
+})
 
 export interface Usuario {
     id?: string,
@@ -29,7 +52,7 @@ const usuarioSchema = z.object({
     termo: z.literal(true, { errorMap: () => ({ message: 'Você deve aceitar os termos' }) })
 })
 
-function showValidationError(input: HTMLElement | null, message: string) {
+function mostrarErro(input: HTMLElement | null, message: string) {
     if (!input) return;
     const erro = document.createElement('div');
     erro.className = 'erro-validacao';
@@ -38,7 +61,7 @@ function showValidationError(input: HTMLElement | null, message: string) {
     input.parentElement?.appendChild(erro);
 }
 
-function cleanForm(campos: any) {
+function limparForm(campos: any) {
     campos.nome.value = '';
     campos.email.value = '';
     campos.sexoMasculino.checked = false;
@@ -81,7 +104,7 @@ enviar.addEventListener('click', async (event) => {
                 case 'curso': input = curso; break;
                 case 'termo': input = termos; break;
             }
-            showValidationError(input, erro.message);
+            mostrarErro(input, erro.message);
         });
         return;
     }
@@ -93,7 +116,7 @@ enviar.addEventListener('click', async (event) => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(usuario)
         })
-        cleanForm({ nome, email, sexoMasculino, sexoFeminino, curso, descricao, termos })
+        limparForm({ nome, email, sexoMasculino, sexoFeminino, curso, descricao, termos })
         alert('Inscrição realizada com sucesso!')
     } catch (err) {
         alert('Erro ao salvar inscrição!')
