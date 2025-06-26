@@ -102,15 +102,18 @@ textarea {
 }
 
 .botao {
+  box-shadow: 0 4px 15px rgb(212, 212, 212);
   margin-top: 32px;
   margin-left: 24px;
+  margin-bottom: 24px;
   width: 200px;
   padding: 14px;
   border: none;
   border-radius: 8px;
   background-color: var(--cor-azul);
-  color: var(--cor-texto);
+  color: #FCFDFC;
   cursor: pointer;
+  
 }
 
 .botao:hover {
@@ -193,4 +196,29 @@ p {
 ::placeholder {
   color: var(--cor-texto);
   opacity: 0.7;
+}
+
+a{
+  box-shadow: 0 4px 15px rgb(212, 212, 212);
+  display: flex;
+  align-items: center; 
+  gap: 50px;
+  text-decoration: none;
+  margin-top: 32px;
+  margin-left: 24px;
+  margin-bottom: 24px;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4f4f4f;
+  color: #FCFDFC;
+  cursor: pointer;
+  font-size: smaller;
+  width: 170px;
+  display: inline-block;
+  text-align: center;
+}
+
+a:hover {
+  background-color: #252525;
 }

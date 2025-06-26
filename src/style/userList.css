@@ -1,15 +1,15 @@
 body {
-  background-color: #53606d83;
+  background-color: #e7e7e7b5;
   font-family: 'Quicksand', sans-serif;
 }
 
 .usuario-item {
   padding: 16px 24px;
-  border-bottom: 1px solid #d1d5db;
+  box-shadow: 0 4px 15px rgb(162, 162, 162);
   color: #222c36;
   background: #fff;
   border-radius: 8px;
-  width: 100%; /* ocupa toda a largura possível */
+  width: 100%;
   box-sizing: border-box;
 }
 
