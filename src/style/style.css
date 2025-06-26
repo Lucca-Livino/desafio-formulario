@@ -9,6 +9,7 @@
   --bloco-fundo: #F1F1F199;
   --cor-fundo: #FFFFFF;  
   --cor-texto:  #363635;
+  --box-shadow: 0 4px 15px rgb(212, 212, 212)
 }
 
 .dark-mode {
@@ -16,6 +17,7 @@
   --bloco-fundo: #373636;
   --cor-fundo: #1E1E1E;  
   --cor-texto: #FCFDFC;
+  --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.733);
 } 
 
 
@@ -102,7 +104,7 @@ textarea {
 }
 
 .botao {
-  box-shadow: 0 4px 15px rgb(212, 212, 212);
+  box-shadow: var(--box-shadow);
   margin-top: 32px;
   margin-left: 24px;
   margin-bottom: 24px;
@@ -199,7 +201,7 @@ p {
 }
 
 a{
-  box-shadow: 0 4px 15px rgb(212, 212, 212);
+  box-shadow: var(--box-shadow);
   display: flex;
   align-items: center; 
   gap: 50px;
